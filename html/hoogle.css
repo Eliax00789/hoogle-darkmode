@@ -7,13 +7,14 @@ html {
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
     font-size: 13px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #293845;
 }
 
 #body {
@@ -22,13 +23,13 @@ body {
 }
 
 a img {
-    padding: 0px;
-    margin: 0px;
-    border: 0px;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
-a:hover {
-    background-color: #ffb;
+a:not(:has(> img)):hover {
+    background-color: #737335;
 }
 
 a {
@@ -43,23 +44,27 @@ a {
 #links {
     background: none repeat scroll 0 0 #293845;
     border-top: 5px solid #4E6272;
+    border-bottom: 5px solid #4E6272;
     color: #DDDDDD;
     text-align: right;
     padding: 0.2em;
 }
 
-#top-menu {
-    display: inline-table;
-    list-style: none outside none;
-    margin: 0 0 0 1em;
-    text-align: left;
-}
-
 #top-menu li {
-    border-left: 1px solid #D5D5D5;
     display: inline;
     padding: 0;
     white-space: nowrap;
+}
+
+#top-menu {
+    display: flex;
+    width: fit-content;
+    list-style: none outside none;
+    margin: 0 0 0 auto;
+    text-align: left;
+}
+#top-menu li:not(:last-child) {
+    border-right: 1px solid #D5D5D5;
 }
 
 #top-menu li a,
@@ -72,12 +77,12 @@ a {
 }
 
 #top-menu li a:hover {
-    background-color: #4e6272;
+    background-color: #4E6272;
     text-decoration: underline;
 }
 
 form {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 #logo img {
@@ -88,22 +93,30 @@ form {
     font-size: 16px;
     margin-bottom: 16px;
     vertical-align: bottom;
+    color: #ffffff;
+    background-color: #000000;
 }
+
 #scope_chosen, #scope {
     width: 200px;
 }
+
 #scope_chosen .chosen-drop {
     width: 400px;
 }
+
 .chosen-container .chosen-results li em {
-  font-weight: bold;
-  text-decoration: none !important;
+    font-weight: bold;
+    text-decoration: none !important;
 }
 
 #hoogle {
     width: 300px;
     margin-right: 5px;
     margin-left: 5px;
+}
+#hoogle:focus-visible {
+    outline: none;
 }
 
 #submit {
@@ -124,9 +137,8 @@ form {
 #left {
     float: left;
     width: 140px;
-    margin: 0px;
-    padding: 0px;
-    margin-left: 10px;
+    padding: 0;
+    margin: 0 0 0 10px;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -138,6 +150,7 @@ form {
     margin-bottom: 7px;
     white-space: nowrap;
     display: block;
+    color: #FFFFFF;
 }
 
 #left a {
@@ -150,7 +163,7 @@ form {
     padding-right: 16px;
     background-image: url(more_small.png);
     background-position: center right;
-    color: #0E774A;
+    color: #7EFF7E;
 }
 
 #left .pad {
@@ -170,11 +183,15 @@ form {
 */
 
 #footer {
-    background: none repeat scroll 0 0 #DDDDDD;
-    border-top: 1px solid #AAAAAA;
-    color: #666666;
+    background: none repeat scroll 0 0 #293845;
+    border-top: 5px solid #4E6272;
+    border-bottom: 5px solid #4E6272;
+    color: #FFFFFF;
     width: 100%;
-    padding: 1.3em 0;
+    font-size: 85%;
+    text-decoration: none;
+    padding: 0.4em 0;
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -184,19 +201,19 @@ form {
 */
 
 h1 {
-    padding: 5px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     font-weight: bold;
-    padding-left: 170px;
+    padding: 5px 5px 0 170px;
     font-size: 16px;
+    color: #FFF;
 }
 
 p {
     margin-left: 170px;
     margin-right: 20px;
     font-size: 16px;
+    color: #FFFFFF;
 }
 
 
@@ -211,15 +228,11 @@ p {
 }
 
 #example {
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
     padding: 3px;
     width: 400px;
-    border: 2px solid #cc0;
-    color: black;
-    background-color: #F5F5F5;
-    border: 1px solid #E5E5E5;
+    background-color: #1e2a33;
+    color: #FFFFFF;
     text-align: left;
 }
 
@@ -233,6 +246,7 @@ p {
 */
 
 .result {
+    border: 1px solid #5a5a5a;
     margin-left: 170px;
     margin-right: 20px;
     margin-top: 1.5em;
@@ -243,7 +257,10 @@ p {
 }
 
 .from, .doc {
-    margin-top: 0.4em;
+    margin: 0 0.5em 0.5em;
+}
+.from {
+    margin-top: 0.5em;
 }
 
 a.dull, a.dull:hover {
@@ -258,15 +275,15 @@ a.dull, a.dull:hover {
 }
 
 .ans {
-    background: none repeat scroll 0 0 #F0F0F0;
-    border-top: 1px solid #CCCCCC;
+    background: none repeat scroll 0 0 #000000;
     font-size: 16px;
     padding: 0.2em 0.5em;
 }
 
 .ans a {
-    color: black;
+    color: #FFFFFF;
 }
+
 .ans .name {
     color: #C4451D;
 }
@@ -275,17 +292,35 @@ a.dull, a.dull:hover {
     float: right;
     color: #CCCCCC;
 }
+
 .links a {
     color: #888;
     font-size: 12px;
 }
 
-.c0{background-color: #fcc;}
-.c1{background-color: #cfc;}
-.c2{background-color: #ccf;}
-.c3{background-color: #ffc;}
-.c4{background-color: #fcf;}
-.c5{background-color: #cff;}
+.c0 {
+    background-color: #fcc;
+}
+
+.c1 {
+    background-color: #cfc;
+}
+
+.c2 {
+    background-color: #ccf;
+}
+
+.c3 {
+    background-color: #ffc;
+}
+
+.c4 {
+    background-color: #fcf;
+}
+
+.c5 {
+    background-color: #cff;
+}
 
 .more, .more:visited {
     padding-left: 16px;
@@ -300,7 +335,7 @@ a.dull, a.dull:hover {
 .from a, .p1, .p2 {
     white-space: nowrap;
     text-decoration: none;
-    color: #0E774A;
+    color: #7EFF7E;
 }
 
 /** DOCS **/
@@ -314,26 +349,36 @@ docs may be in one of three states:
 .doc {
     font-size: 11px;
     background-repeat: no-repeat;
-    background-position: 2px left;
-    margin-bottom: 1.0em;
+    /*! margin-bottom: 1.0em; */
 }
+
 .doc, .doc a {
     color: #888;
 }
+
 .doc h1, .doc h2, .doc h3, .doc h4, .doc h5, .doc h6 {
     font-size: 11px;
     display: inline;
-    padding: 0px;
+    padding: 0;
 }
 
-.open, .shut {padding-left: 13px;}
-.open {background-image: url(less_gray.png);}
-.shut {background-image: url(more_gray.png);}
+.open, .shut {
+    padding-left: 13px;
+}
+
+.open {
+    background-image: url(less_gray.png);
+}
+
+.shut {
+    background-image: url(more_gray.png);
+}
 
 .doc, .shut {
     max-height: 2.0em;
     overflow: hidden;
 }
+
 .open {
     max-height: 100%;
     white-space: pre-wrap;

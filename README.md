@@ -1,4 +1,6 @@
-# Hoogle [![Hackage version](https://img.shields.io/hackage/v/hoogle.svg?label=Hackage)](https://hackage.haskell.org/package/hoogle) [![Stackage version](https://www.stackage.org/package/hoogle/badge/nightly?label=Stackage)](https://www.stackage.org/package/hoogle) [![Build status](https://img.shields.io/github/actions/workflow/status/ndmitchell/hoogle/ci.yml?branch=master)](https://github.com/ndmitchell/hoogle/actions)
+# Darker Hoogle than normal! [![Hackage version](https://img.shields.io/hackage/v/hoogle.svg?label=Hackage)](https://hackage.haskell.org/package/hoogle) [![Stackage version](https://www.stackage.org/package/hoogle/badge/nightly?label=Stackage)](https://www.stackage.org/package/hoogle) [![Build status](https://img.shields.io/github/actions/workflow/status/ndmitchell/hoogle/ci.yml?branch=master)](https://github.com/ndmitchell/hoogle/actions)
+
+![preview](example.png)
 
 Hoogle is a Haskell API search engine, which allows you to search many standard Haskell libraries by either function name, or by approximate type signature. The online version can be found at https://hoogle.haskell.org/ and searches [Stackage](https://www.stackage.org/).
 
